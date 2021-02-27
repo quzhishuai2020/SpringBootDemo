@@ -15,7 +15,7 @@ public class HelloWorldController {
     @ResponseBody
     public Map<String,Object> showHelloWorld() {
 
-        Map<String,Object> result = new HashMap<>();
+        Map<String,Object> result = new HashMap<String,Object>();
         result.put("msg","Hello world!");
         return result;
     }

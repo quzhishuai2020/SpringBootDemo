@@ -21,7 +21,7 @@ public class FileUploadController {
     public Map<String,Object> fileUpload(MultipartFile filename) throws Exception{
         System.out.println("上传的文件是:" + filename.getOriginalFilename());
         filename.transferTo(new File("e:/" + filename.getOriginalFilename()));
-        Map<String,Object> map = new HashMap<>();
+        Map<String,Object> map = new HashMap<String,Object>();
         map.put("msg","文件" + filename.getOriginalFilename()+"上传成功");
         return map;
     }

@@ -25,12 +25,12 @@ public class App2 {
         bean.addUrlMappings("/second");
         return bean;
     }
-    @Bean
-    public FilterRegistrationBean getFilterRegistrationBean(){
-        FilterRegistrationBean filterBean = new FilterRegistrationBean<>(new SecondFilter());
-        filterBean.addUrlPatterns(new String[]{"*.do","/second"});
-        return filterBean;
-    }
+//    @Bean
+//    public FilterRegistrationBean getFilterRegistrationBean(){
+//        FilterRegistrationBean filterBean = new FilterRegistrationBean<SecondFilter>(new SecondFilter());
+//        filterBean.addUrlPatterns(new String[]{"*.do","/second"});
+//        return filterBean;
+//    }
     @Bean
     public ServletListenerRegistrationBean<SecondListener> getServletListenerRegistrationBean(){
         ServletListenerRegistrationBean<SecondListener> bean = new ServletListenerRegistrationBean<SecondListener>(new SecondListener());
